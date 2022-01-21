@@ -34,9 +34,14 @@ public:
         int num = 0;
         while(temp!=nullptr){
             num = num << 1;
-            num |= (1 & temp->val);
+            num |= temp->val;
             temp = temp->next;
         }
+        
+        // while(temp!=nullptr){
+        //     num = (num*2) + temp->val;
+        //     temp = temp->next;
+        // }
         return num;
         
     }
