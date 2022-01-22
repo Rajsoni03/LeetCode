@@ -24,6 +24,7 @@ The number of the nodes in the list is in the range [0, 104].
 pos is -1 or a valid index in the linked-list.
 */
 
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -32,16 +33,30 @@ pos is -1 or a valid index in the linked-list.
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+/*
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode* fast = head;
-        ListNode* slow = head;
+        set<ListNode*> st;
         
-        while(fast && fast->next){
-            fast = fast->next->next;
-            slow = slow->next;
-            if (fast==slow) return true;
+        while(head && head->next){
+            if (st.find(head)!=st.end()) return true;
+            st.insert(head);
+            head = head->next;
+        }
+        return false;
+    }
+};
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        unordered_set<ListNode*> st;
+        
+        while(head && head->next){
+            if (st.find(head)!=st.end()) return true;
+            st.insert(head);
+            head = head->next;
         }
         return false;
     }
