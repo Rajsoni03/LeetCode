@@ -37,7 +37,7 @@ pos is -1 or a valid index in the linked-list.
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        set<ListNode*> st;
+        unordered_set<ListNode*> st;
         
         while(head && head->next){
             if (st.find(head)!=st.end()) return true;
@@ -47,17 +47,20 @@ public:
         return false;
     }
 };
- */
+*/
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        unordered_set<ListNode*> st;
+        if (head == nullptr) return 0;
+        ListNode* p1 = head;
+        ListNode* p2 = head;
         
-        while(head && head->next){
-            if (st.find(head)!=st.end()) return true;
-            st.insert(head);
-            head = head->next;
+        while(p1!=nullptr && p2!=nullptr && p2->next!=nullptr){
+            p1 = p1->next;
+            p2 = p2->next->next;
+            if (p1==p2) return 1;
         }
-        return false;
+        return 0;
+        
     }
 };
