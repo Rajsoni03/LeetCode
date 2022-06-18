@@ -1,8 +1,8 @@
 # LeetCode
-
+<!-- 
 ## **Easy Problems**
 
-<!-- | Problem Name  | Code  | Topic | Tagline |
+| Problem Name  | Code  | Topic | Tagline |
 | :------------ |:---------------:| :---------------:| -----:|
 | [1. Two Sum](https://leetcode.com/problems/two-sum/) | [solution](1-two-sum.cpp) | Array, Map | None |
 | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [solution](9-palindrome-number.cpp) | int | Mod and Divide |
@@ -25,4 +25,13 @@
 | Problem Name  | Code  | Topic | Tagline |
 | :------------ |:---------------:| :---------------:| -----:|
 |               |                 |                  |       |
+
+
+# Dynamic Programming 
+
+1 - Fibonacci Series
+2 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+3 - [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+4 - [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)
+
  -->
